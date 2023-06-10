@@ -1,0 +1,9 @@
+//Java Program to Find ASCII Value of a character
+
+public class MyProgram{
+  public static void main(String args[]){
+    char character = 'A';
+    int asciiValue = character;
+    System.out.println("ASCII Value of "+character+" is "+asciiValue);
+    }
+}
