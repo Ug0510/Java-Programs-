@@ -1,0 +1,15 @@
+//Java Program to Compute Quotient and Remainder
+
+public class MyProgram{
+  public static void main(String args[]){
+    int num1 = 34;
+    int num2 = 13;
+    
+    int quotient = num1/num2;
+    int remainder = num1%num2;
+    
+    System.out.println(num1 +"/"+num2+" Division Done!");
+    System.out.println("Quotient is "+quotient+"\nRemainder is "+remainder);
+      
+  }
+}
