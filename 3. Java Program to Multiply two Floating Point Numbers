@@ -1,0 +1,10 @@
+//Java Program to Multiply two Floating Point Numbers
+
+public class MyProgram{
+  public static void main(String args[]){
+    float num1 = 2.5f;
+    float num2 = 3.7f;
+    float numProd = num1 * num2;
+    System.out.println("Product of Numbers is "+numProd);
+    }
+}
