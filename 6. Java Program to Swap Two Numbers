@@ -1,3 +1,16 @@
 //Java Program to Swap Two Numbers
 
 //using third variable 
+class MyProgram {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 3;
+        //swapping number
+        int c = a;
+        a = b;
+        b = c;
+        
+        System.out.println("Number Swapped!");
+        System.out.println("Now value of a is "+a+" and value of b is "+b);
+    }
+}
