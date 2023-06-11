@@ -14,3 +14,18 @@ class MyProgram {
         System.out.println("Now value of a is "+a+" and value of b is "+b);
     }
 }
+
+//without using third variable 
+class MyProgram {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 3;
+        //swapping number
+        a = a+b;
+        b = a-b;
+        a = a-b;
+        
+        System.out.println("Number Swapped!");
+        System.out.println("Now value of a is "+a+" and value of b is "+b);
+    }
+}
