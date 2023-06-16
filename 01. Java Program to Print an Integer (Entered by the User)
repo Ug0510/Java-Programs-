@@ -1,8 +1,5 @@
-<h1 style="color:lightblue">Java Program to Print an Integer (Entered by the User)</h1>
-<br>
-<hr><hr>
+####Java Program to Print an Integer (Entered by the User)
 
-```
 import java.util.Scanner;
 
 class FirstProgram {
@@ -13,4 +10,3 @@ class FirstProgram {
         System.out.println("You entered "+num);
     }
 }
-```
