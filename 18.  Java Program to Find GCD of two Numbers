@@ -5,7 +5,7 @@ class GCD {
         
         int num1 = 32;
         int num2 = 24;
-        int gcd = 0;
+        int gcd = 1;
         for(int i = 1; i<= Math.min(num1,num2); i++)
         {
             if(num1 % i == 0 && num2 % i == 0)
