@@ -1,4 +1,4 @@
-// Java Program to Find GCD of two Numbers
+// Java Program to Find GCD of two Numbers using for loop
 
 class GCD {
     public static void main(String[] args) {
@@ -10,6 +10,26 @@ class GCD {
         {
             if(num1 % i == 0 && num2 % i == 0)
                 gcd = i;
+        }
+        System.out.println("GCD of "+num1+" and "+num2+" is "+gcd);
+    }
+}
+
+// Java Program to Find GCD of two Numbers using while loop
+
+class GCD {
+    public static void main(String[] args) {
+        
+        int num1 = 32;
+        int num2 = 24;
+        int gcd = 0;
+        
+        int i = 1;
+        while(i<= Math.min(num1,num2))
+        {
+            if(num1%i==0 && num2%i==0)
+                gcd = i;
+            i+=1;
         }
         System.out.println("GCD of "+num1+" and "+num2+" is "+gcd);
     }
