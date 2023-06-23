@@ -15,3 +15,21 @@ class DigitOfNumber {
         System.out.println("Number of digits in a Number is "+ count);
     }
 }
+
+//2nd Approach to solve it using For-Loop
+// Java Program to Count Number of Digits in an Integer
+
+
+class DigitOfNumber {
+    public static void main(String[] args) {
+        
+        int num = 52313;
+        int count = 0;
+        
+        for(;num!=0;num/=10)
+        {
+            count++;
+        }
+        System.out.println("Number of digits in a Number is "+ count);
+    }
+}
