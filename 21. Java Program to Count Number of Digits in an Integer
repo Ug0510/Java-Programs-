@@ -1,1 +1,17 @@
 // Java Program to Count Number of Digits in an Integer
+
+
+class DigitOfNumber {
+    public static void main(String[] args) {
+        
+        int num = 52313;
+        int count = 0;
+        
+        while(num!=0)
+        {
+            count++;
+            num/=10;
+        }
+        System.out.println("Number of digits in a Number is "+ count);
+    }
+}
