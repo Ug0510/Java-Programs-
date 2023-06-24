@@ -20,3 +20,20 @@ class CheckPalindrome {
             System.out.println("Number is prime");
     }
 }
+
+
+// 2nd Approach(Better)
+
+class CheckPalindrome {
+    public static void main(String[] args) {
+        int num = 4;
+        int a = (int)Math.sqrt(num);
+        
+        if(num == a*a)
+        {
+            System.out.println("Number is not Prime");
+        }
+        else
+            System.out.println("Number is prime"+a);
+    }
+}
