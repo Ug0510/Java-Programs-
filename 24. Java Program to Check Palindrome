@@ -1,4 +1,4 @@
-// Java Program to Check Palindrome
+// Java Program to Check Whether a Number is Prime or Not
 
 class CheckPalindrome {
     public static void main(String[] args) {
