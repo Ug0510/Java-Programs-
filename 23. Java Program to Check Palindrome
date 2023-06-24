@@ -1,1 +1,22 @@
 // Java Program to Check Palindrome
+
+class CheckPalindrome {
+    public static void main(String[] args) {
+        int num = 31213;
+        
+        //temp variable to temporary hold the value of original number
+        int temp = num;
+        int r = 0;
+        
+        while(num!=0)
+        {
+            int a = num % 10;
+            r = r * 10 + a;
+            num/=10;
+        }
+        if(temp == r)
+            System.out.println("Given Number is Palindrome!");
+        else
+            System.out.println("Given Number is not Palindrome!");
+    }
+}
