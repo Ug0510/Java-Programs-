@@ -1,2 +1,14 @@
 // Java Program to Calculate the Power of a Number
 
+class NumberPower {
+    public static void main(String[] args) {
+        int num = 5;
+        int power = 2;
+        int f = 1;
+        for(int i = 1; i<=power; i++)
+        {
+            f = f*num;
+        }
+        System.out.println("Power of "+power+" to "+num+" results "+f);
+    }
+}
