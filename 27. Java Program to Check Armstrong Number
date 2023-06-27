@@ -1,1 +1,31 @@
 // Java Program to Check Armstrong Number
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int num = 371;
+        int count = 0;
+        //temporary variable to hold original value 
+        int temp = num;
+        //Counting number of digit in number
+        while(num!=0)
+        {
+            count++;
+            num/=10;
+        }
+        num = temp;
+        int sum = 0;
+        while(num!=0)
+        {
+            sum+= Math.pow(num%10,count);
+            num/=10;
+        }
+        
+        if(temp == sum)
+        {
+            System.out.println("Given number is Armstrong");
+        }
+        else{
+            System.out.println("Given number is not Armstrong");
+        }
+    }
+}
