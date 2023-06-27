@@ -1,1 +1,46 @@
 // Java Program to Display Armstrong Number Between Two Intervals
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int n1 = 101;
+        int n2 = 422;
+        
+        //To find numbers between interval which are armstrong
+        for(int i = n1;i<=n2;i++)
+        {
+            if(ArmstrongChecker(i))
+                System.out.println(i);
+                
+        }
+    }
+
+    //Function to check Armstrong number
+    public static boolean ArmstrongChecker(int num)
+    {
+        int count = 0;
+        //temporary variable to hold original value 
+        int temp = num;
+        //Counting number of digit in number
+        while(num!=0)
+        {
+            count++;
+            num/=10;
+        }
+        num = temp;
+        
+        int sum = 0;
+        while(num!=0)
+        {
+            sum+= Math.pow(num%10,count);
+            num/=10;
+        }
+        
+        if(temp == sum)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
