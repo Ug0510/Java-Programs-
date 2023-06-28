@@ -6,7 +6,7 @@ class CheckPalindrome {
         int flag = 0;
         for(int i=2;i<=num/2;num++)
         {
-            if(i*i == num)
+            if(num%i==0)
             {
                 flag = 1;
                 break;
