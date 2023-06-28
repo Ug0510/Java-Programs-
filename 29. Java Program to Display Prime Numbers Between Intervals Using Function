@@ -1,1 +1,32 @@
-Coming soon...
+// Java Program to Display Prime Numbers Between Intervals Using Function
+
+public class IntervalPrime
+{
+    public static void main(String args[])
+    {
+        int n1 = 7;
+        int n2 = 31;
+        System.out.println("Prime numbers are:");
+        for(int i = n1;i <= n2; i++)
+        {
+            if(checkPrime(i))
+                System.out.println(i);
+        }
+    }
+    public static boolean checkPrime(int num)
+    {
+        int flag = 0;
+        for(int i=2;i<=num/2;i++)
+        {
+            if(num%i==0)
+            {
+                flag = 1;
+                break;
+            }
+        }
+        if(flag == 1)
+            return false;
+        else
+            return true;
+    }
+}
