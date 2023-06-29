@@ -1,1 +1,14 @@
-//Java Program to Display Factors of a Number
+// Java Program to Display Factors of a Number
+
+class DisplayFactors {
+    public static void main(String[] args) {
+        int n1 = 12;
+        System.out.println("Factors are: ");
+        for(int i = 1; i <= n1; i++)
+        {
+            if(n1 % i == 0)
+                System.out.println(i);
+        }
+    }
+    
+}
