@@ -1,1 +1,33 @@
+// Java Program to Find G.C.D Using Recursion
 
+class RecursionGCD {
+    public static void main(String[] args) {
+        int n1 = 12;
+        int n2 = 48;
+        System.out.println(GCD(n1,n2));
+    }
+    public static int findLower(int a, int b)
+    {
+        if(a<b)
+            return a;
+        return b;
+    }
+    public static int GCD(int a, int b)
+    {
+        if(a == findLower(a,b))
+        {
+            if(b%a ==0)
+                return a;
+            b = b-a;
+            return GCD(a,b);
+        }
+        else if(b == findLower(a,b))
+        {
+            if(a%b ==0)
+                return b;
+            a = a-b;
+            return GCD(a,b);
+        }
+        return a;
+    }
+}
