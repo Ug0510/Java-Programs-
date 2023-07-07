@@ -1,1 +1,51 @@
+// Java Program to Convert Binary Number to Decimal and vice-versa
+import java.util.Scanner;
 
+class NumberConverter{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        //Menu to take user's choice
+        System.out.println("Press 1 for binary to Decimal Conversion");
+        System.out.println("Press 2 for Decimal to Binary Conversion");
+        System.out.println("Enter your choice: ");
+        int choice = sc.nextInt();
+
+        switch(choice)
+        {
+            case 1: 
+                System.out.println("Enter a binary number");
+                long biNum = sc.nextLong();
+                int dec = 0;
+                int count = 0;
+                //To convert binary number to decimal
+                while(biNum!=0)
+                {
+                    int a = (int)(biNum%10);
+                    dec = dec + (a * (int)(Math.pow(2,count)));
+                    count ++;
+                    biNum/=10;
+                }
+                System.out.println("Equivalent Decimal number is :"+dec);
+            break;
+            
+            case 2:
+                System.out.println("Enter a decimal number");
+                int decm = sc.nextInt();
+                String bin = "";
+                //To convert decimal number to binary
+                while(decm!=0)
+                {
+                    int rem = decm%2;
+                    bin=Integer.toString(rem)+bin;
+                    decm/=2;
+                }
+                System.out.println("Equivalent Binary number is :"+bin);
+            break;
+            
+            default: 
+            System.out.println("You entered an invalid choice!");
+            
+        }
+    }
+}
