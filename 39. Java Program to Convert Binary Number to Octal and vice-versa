@@ -1,1 +1,100 @@
 // Java Program to Convert Binary Number to Octal and vice-versa
+
+import java.util.Scanner;
+
+public class BinOctConversion{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        //Choice for user to choose which conversion to be done
+        System.out.println("Enter 1 for Binary to Octal Conversion");
+        System.out.println("Enter 2 for Octal to Binary Conversion");
+        System.out.println("Enter your choice: ");
+        int choice = sc.nextInt();
+        
+        int oct;
+        String bin;
+        
+        switch(choice)
+        {
+            //case 1 for binary to octal conversion
+            case 1:
+                System.out.println("Enter a Binary Number: ");
+                bin = sc.next();
+                oct = BinToOct(bin);
+                System.out.println("Equivalent Octal Number is "+ oct);
+            break;
+            //case 2 for octal to binary conversion
+            case 2:
+                System.out.println("Enter a Octal Number: ");
+                oct = sc.nextInt();
+                bin = OctToBin(oct);
+                System.out.println("Equivalent Binary Number is "+bin);
+            break;
+            
+            default: System.out.println("Enter Valid Choice");
+        }
+    }
+    
+    public static int BinToOct(String bin)
+    {
+        if(bin.length() % 3 != 0)
+        {
+            bin=(bin.length() % 3 == 1 )? "00"+bin:"0"+bin;
+        }
+        String oct="";
+        for(int i=bin.length() - 3; i >= 0; i-=3)
+        {
+            String pair = bin.substring(i,i+3);
+            
+            switch(pair){
+                case "000": oct=0 + oct;
+                break;
+                case "001": oct=1 + oct;
+                break;
+                case "010": oct=2 + oct;
+                break;
+                case "011": oct=3 + oct;
+                break;
+                case "100": oct=4 + oct;
+                break;
+                case "101": oct=5 + oct;
+                break;
+                case "110": oct=6 + oct;
+                break;
+                case "111": oct=7 + oct;
+            }
+        }
+        return Integer.parseInt(oct);
+    }
+    public static String OctToBin(int oct)
+    {
+        String bin = "";
+        
+        while(oct != 0)
+        {
+            int a = oct % 10;
+            
+            switch(a){
+                case 0: bin = "000" + bin;
+                break;
+                case 1: bin = "001" + bin;
+                break;
+                case 2: bin = "010" + bin;
+                break;
+                case 3: bin = "011" + bin;
+                break;
+                case 4: bin = "100" + bin;
+                break;
+                case 5: bin = "101" + bin;
+                break;
+                case 6: bin = "110" + bin;
+                break;
+                case 7: bin = "111" + bin;
+            }
+            oct/=10;
+        }
+        return bin;
+    }
+}
