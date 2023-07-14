@@ -1,1 +1,25 @@
 // Java Program to Reverse a Sentence Using Recursion
+
+import java.util.Scanner;
+
+public class ReverseSentence
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a Sentence: ");
+        String sen = sc.nextLine();
+        
+        System.out.println("Reversed Sentence is "+revSen(sen));
+        
+    }
+    public static String revSen(String sen)
+    {
+        //if string is empty return 
+        if(sen.equals(""))
+            return " ";
+        else 
+            // returning the last character of string with the output of recursion function in which full string except last character has been passed
+            return sen.charAt(sen.length() -1 ) + revSen(sen.substring(0,sen.length() - 1));
+    }
+}
