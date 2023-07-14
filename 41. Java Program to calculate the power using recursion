@@ -1,1 +1,21 @@
 // Java Program to calculate the power using recursion
+
+public class PowerRecursion
+{
+    public static void main(String args[])
+    {
+        int num = 5;
+        int power = 3;
+        System.out.println("Result is "+ pow(num,power));
+    }
+    
+    public static int pow(int n, int pow)
+    {
+        // if power is 0 then return 1
+        if(pow == 0)
+            return 1;
+        // otherwise return the number in multiplication with the output of recursion call
+        else
+            return n * pow(n,pow-1);
+    }
+}
