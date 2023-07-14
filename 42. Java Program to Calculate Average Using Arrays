@@ -1,1 +1,17 @@
 // Java Program to Calculate Average Using Arrays
+
+class AverageArray
+{
+    public static void main(String args[])
+    {
+        double nums[] = {41.12,23.12,21,12.1};
+        double sum = 0.0;
+        
+        for(double arr : nums)
+        {
+            sum+=arr;
+        }
+        double average = sum / nums.length;
+        System.out.println("Average of all numbers is "+average);
+    }
+}
