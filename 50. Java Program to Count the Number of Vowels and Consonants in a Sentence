@@ -1,1 +1,32 @@
 // Java Program to Count the Number of Vowels and Consonants in a Sentence
+
+class VowelConsonantCount {
+    public static void main(String[] args) {
+        String sen = "Hi, How are you?";
+        
+        //variable to store count of vowel and consonant
+        int vow = 0;
+        int cons = 0;
+        
+        
+        for(int i = 0; i < sen.length(); i++)
+        {
+            //extracting each character from sentence
+            char ch = sen.charAt(i);
+            ch = Character.toLowerCase(ch);
+            //checking if it is alphabet
+            if(ch <= 'z' && ch >='a')
+            {
+                //if it's a vowel increase vowel count
+                if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+                    vow++;
+                //otherwise increase consonant count
+                else
+                    cons++;
+            }
+        }
+        System.out.println("Number of Vowels in given sentence is "+vow);
+        System.out.println("Number of Consonants in given sentence is "+cons);
+        
+    }
+}
