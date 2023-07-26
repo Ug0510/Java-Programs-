@@ -1,1 +1,23 @@
 // Java Program to Sort Elements in Lexicographical Order (Dictionary Order)
+
+class CharacterSort {
+    public static void main(String[] args) {
+        String arr[] = {"ami","je","tomar","hi","how","are","you"};
+        
+        for(int i = 0; i < arr.length -1 ; i++)
+        {
+            for(int j = 0; j < arr.length - 1 - i; j++)
+            {
+                if(arr[j].compareTo(arr[j+1]) > 0){
+                String temp = arr[j+1];
+                arr[j+1] = arr[j];
+                arr[j] = temp;
+            }
+            }
+        }
+        // Printing sorted array
+        for(String elem : arr){
+            System.out.println(elem);
+        }
+    }
+}
