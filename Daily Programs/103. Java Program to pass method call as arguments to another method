@@ -1,1 +1,27 @@
 // Java Program to pass method call as arguments to another method
+
+class MethodCallAsArgument {
+    
+    public int add(int a , int b)
+    {
+        // returning sum of both numbers
+        return a + b;
+    }
+    
+    public void square(int num){
+        // returning the square of num
+        int sqr = num * num;
+        
+        // printing the result
+        System.out.println(sqr);
+    }
+    
+    public static void main(String args[])
+    {
+        MethodCallAsArgument obj = new MethodCallAsArgument();
+
+        // call the square() method
+        // passing add() as an argument
+        obj.square(obj.add(3,5));
+    }
+}
